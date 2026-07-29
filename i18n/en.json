@@ -1,0 +1,61 @@
+{
+  "smartling": {
+    "translate_paths": [
+      {
+        "path": "*/message",
+        "key": "{*}/message",
+        "instruction": "*/description"
+      }
+    ],
+    "variants_enabled": true,
+    "string_format": "icu"
+  },
+  "0323de4f66": {
+    "message": "Logout"
+  },
+  "3d728e1b6e": {
+    "message": "we've logged this error and we'll fix it soon."
+  },
+  "44f00c21a1": {
+    "message": "try going back to the <a>beginning</a>."
+  },
+  "5a2351b91b": {
+    "message": "internal server error"
+  },
+  "64af1b1f5f": {
+    "message": "upside down face"
+  },
+  "654b0a0a07": {
+    "message": "i18n: English"
+  },
+  "690d8ebdfb": {
+    "message": "i'm sorry, dave. i'm afraid i can't do that."
+  },
+  "794bd545aa": {
+    "message": "React Scan"
+  },
+  "835ca8f9cf": {
+    "message": "it's not you, it's us. our server is monkeying around."
+  },
+  "98088e4b13": {
+    "message": "Something went wrong. 😦"
+  },
+  "99dea78007": {
+    "message": "Login"
+  },
+  "a4a78c3a33": {
+    "message": "i18n: French"
+  },
+  "c84d77792c": {
+    "message": "i18n: Long"
+  },
+  "d40cbcb573": {
+    "message": "see no evil, hear no evil, speak no evil monkeys"
+  },
+  "d8f4a19935": {
+    "message": "not found"
+  },
+  "logo-id": {
+    "message": "logo"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "0323de4f66": [
+    {
+      "type": 0,
+      "value": "Déconnexion"
+    }
+  ],
+  "3d728e1b6e": [
+    {
+      "type": 0,
+      "value": "Nous avons enregistré cette erreur et nous la corrigerons bientôt."
+    }
+  ],
+  "44f00c21a1": [
+    {
+      "type": 0,
+      "value": "essayez de revenir au "
+    },
+    {
+      "type": 8,
+      "value": "a",
+      "children": [
+        {
+          "type": 0,
+          "value": "début"
+        }
+      ]
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "5a2351b91b": [
+    {
+      "type": 0,
+      "value": "erreur interne du serveur"
+    }
+  ],
+  "64af1b1f5f": [
+    {
+      "type": 0,
+      "value": "visage à l'envers"
+    }
+  ],
+  "654b0a0a07": [
+    {
+      "type": 0,
+      "value": "i18n : anglais"
+    }
+  ],
+  "690d8ebdfb": [
+    {
+      "type": 0,
+      "value": "Je suis désolé, Dave. Je ne peux malheureusement pas faire ça."
+    }
+  ],
+  "794bd545aa": [
+    {
+      "type": 0,
+      "value": "React Scan"
+    }
+  ],
+  "835ca8f9cf": [
+    {
+      "type": 0,
+      "value": "Ce n'est pas vous, c'est nous. Notre serveur fait des bêtises."
+    }
+  ],
+  "98088e4b13": [
+    {
+      "type": 0,
+      "value": "Une erreur s'est produite. 😦"
+    }
+  ],
+  "99dea78007": [
+    {
+      "type": 0,
+      "value": "Connexion"
+    }
+  ],
+  "a4a78c3a33": [
+    {
+      "type": 0,
+      "value": "i18n : français"
+    }
+  ],
+  "c84d77792c": [
+    {
+      "type": 0,
+      "value": "i18n : long"
+    }
+  ],
+  "d40cbcb573": [
+    {
+      "type": 0,
+      "value": "Singes, ne voyez rien, n'entendez rien, ne dites rien, ne dites rien"
+    }
+  ],
+  "d8f4a19935": [
+    {
+      "type": 0,
+      "value": "introuvable"
+    }
+  ],
+  "logo-id": [
+    {
+      "type": 0,
+      "value": "logo"
+    }
+  ]
+}

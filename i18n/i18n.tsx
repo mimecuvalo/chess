@@ -1,0 +1,93 @@
+import {
+  FormattedMessage,
+  IntlConfig,
+  IntlShape,
+  MessageDescriptor,
+  createIntlCache,
+  createIntl as originalCreateIntl,
+  defineMessages as originalDefineMessages,
+  PrimitiveType,
+  useIntl,
+} from 'react-intl';
+import { FormatXMLElementFn } from 'intl-messageformat';
+
+import { ComponentPropsWithoutRef } from 'react';
+
+// Re-export everything and override below what we want to override.
+export * from 'react-intl';
+
+const INTERNAL_LOCALES = ['xx-LS'];
+
+// The FormatJS Babel plugin in `vite.config.mts` generates IDs for messages.
+// This should always have an ID, so we throw an error if it's missing.
+function generateId({ id }: MessageDescriptor) {
+  if (id) {
+    return id;
+  }
+
+  throw new Error('MessageDescriptor must have an id');
+}
+
+export function F(props: ComponentPropsWithoutRef<typeof FormattedMessage>) {
+  const intl = useIntl();
+  const id = generateId(props);
+
+  return (
+    <span className="i18n-msg">
+      {/* eslint-disable-next-line formatjs/enforce-default-message */}
+      <FormattedMessage id={id} {...props} />
+      {intl.locale === 'xx-LS' && ' loooooooo oo ooooooong'}
+    </span>
+  );
+}
+
+export function useMsg(
+  message: MessageDescriptor,
+  values?: Record<string, PrimitiveType | FormatXMLElementFn<string, string>>
+) {
+  const intl = useIntl();
+  return intl.formatMessage(message, values);
+}
+
+// We programmatically define ID's for messages to make things easier for devs.
+export function defineMessages<T extends string, D extends MessageDescriptor>(msgs: Record<T, D>): Record<T, D> {
+  for (const key in msgs) {
+    if (!msgs[key].id) {
+      msgs[key].id = generateId(msgs[key]);
+    }
+  }
+  return originalDefineMessages(msgs);
+}
+
+export function isInternalLocale(locale: string) {
+  return process.env.NODE_ENV === 'development' && INTERNAL_LOCALES.indexOf(locale) !== -1;
+}
+
+// This is optional but highly recommended since it prevents memory leaks.
+// See: https://formatjs.io/docs/intl/#createintl
+const cache = createIntlCache();
+let presetIntl: IntlShape | null = null;
+let didSetupCreateIntl = false;
+export function setupCreateIntl({ defaultLocale, locale, messages }: IntlConfig) {
+  presetIntl = originalCreateIntl(
+    {
+      defaultLocale,
+      locale,
+      messages,
+    },
+    cache
+  );
+
+  didSetupCreateIntl = true;
+}
+
+export function createIntl(options: IntlShape) {
+  if (options) {
+    return originalCreateIntl(options);
+  } else {
+    if (!didSetupCreateIntl) {
+      throw new Error('Need to run setupCreateIntl to use createIntl without options.');
+    }
+    return presetIntl;
+  }
+}

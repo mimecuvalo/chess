@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": false,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["vite/client", "node", "vitest/globals", "@testing-library/jest-dom"],
+    "paths": {
+      "*": ["./*"],
+      "@/*": ["./*"],
+      "components": ["./components"],
+      "components/*": ["./components/*"],
+      "i18n": ["./i18n"],
+      "i18n/*": ["./i18n/*"],
+      "styles": ["./styles"],
+      "util/*": ["./util/*"],
+      "server/*": ["./server/*"],
+      "lib/*": ["./lib/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
+  "exclude": ["node_modules", "dist", ".output", ".vercel"]
+}

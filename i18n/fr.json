@@ -1,0 +1,61 @@
+{
+  "smartling": {
+    "string_format": "icu",
+    "translate_paths": [
+      {
+        "instruction": "*/description",
+        "key": "{*}/message",
+        "path": "*/message"
+      }
+    ],
+    "variants_enabled": true
+  },
+  "0323de4f66": {
+    "message": "Déconnexion"
+  },
+  "3d728e1b6e": {
+    "message": "Nous avons enregistré cette erreur et nous la corrigerons bientôt."
+  },
+  "44f00c21a1": {
+    "message": "essayez de revenir au <a>début</a>."
+  },
+  "5a2351b91b": {
+    "message": "erreur interne du serveur"
+  },
+  "64af1b1f5f": {
+    "message": "visage à l'envers"
+  },
+  "654b0a0a07": {
+    "message": "i18n : anglais"
+  },
+  "690d8ebdfb": {
+    "message": "Je suis désolé, Dave. Je ne peux malheureusement pas faire ça."
+  },
+  "794bd545aa": {
+    "message": "React Scan"
+  },
+  "835ca8f9cf": {
+    "message": "Ce n'est pas vous, c'est nous. Notre serveur fait des bêtises."
+  },
+  "98088e4b13": {
+    "message": "Une erreur s'est produite. 😦"
+  },
+  "99dea78007": {
+    "message": "Connexion"
+  },
+  "a4a78c3a33": {
+    "message": "i18n : français"
+  },
+  "c84d77792c": {
+    "message": "i18n : long"
+  },
+  "d40cbcb573": {
+    "message": "Singes, ne voyez rien, n'entendez rien, ne dites rien, ne dites rien"
+  },
+  "d8f4a19935": {
+    "message": "introuvable"
+  },
+  "logo-id": {
+    "message": "logo"
+  }
+}
