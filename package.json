@@ -1,17 +1,17 @@
 {
-  "name": "all-the-things",
+  "name": "chess",
   "private": true,
-  "description": "all the bells 🔔 and whistles 😙 for TanStack Start",
+  "description": "a chess trainer — a self-aware 1KB bot with a Stockfish coach ♟️",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mimecuvalo/all-the-things.git"
+    "url": "https://github.com/mimecuvalo/chess.git"
   },
   "license": "MIT",
   "engines": {
     "node": ">=22.22.1"
   },
   "bugs": {
-    "url": "https://github.com/mimecuvalo/all-the-things/issues"
+    "url": "https://github.com/mimecuvalo/chess/issues"
   },
   "scripts": {
     "dev": "vite dev",
@@ -25,6 +25,7 @@
     "i18n:extract": "formatjs extract 'app/routes/**/*.ts*' 'components/**/*.ts*' --out-file i18n/en.json --additional-component-names F --id-interpolation-pattern '[md5:contenthash:hex:10]' --flatten --format smartling",
     "i18n:compile": "formatjs compile-folder i18n i18n/compiled --format smartling --ast",
     "config": "node scripts/config.js",
+    "postinstall": "node scripts/copy-stockfish.mjs",
     "prepare": "husky",
     "prisma:generate": "prisma generate",
     "test": "vitest",
@@ -36,6 +37,8 @@
     "@base-ui/react": "1.6.0",
     "@fontsource-variable/oswald": "5.3.0",
     "@fontsource/noto-color-emoji": "5.3.0",
+    "@fontsource/press-start-2p": "5.3.0",
+    "@fontsource/silkscreen": "5.3.0",
     "@hono/zod-validator": "0.9.0",
     "@prisma/adapter-pg": "7.9.0",
     "@prisma/client": "7.9.0",
@@ -43,15 +46,18 @@
     "@tanstack/react-query": "5.101.4",
     "@tanstack/react-router": "1.170.18",
     "@tanstack/react-start": "1.168.32",
+    "chess.js": "1.4.0",
     "classnames": "2.5.1",
     "hono": "4.12.31",
     "intl-messageformat": "11.2.12",
     "pg": "8.22.0",
     "prisma": "7.9.0",
     "react": "19.2.8",
+    "react-chessboard": "5.10.0",
     "react-dom": "19.2.8",
     "react-intl": "10.1.18",
     "sanitize.css": "13.0.0",
+    "stockfish": "18.0.8",
     "zod": "4.4.3"
   },
   "devDependencies": {

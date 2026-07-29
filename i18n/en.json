@@ -13,11 +13,23 @@
   "0323de4f66": {
     "message": "Logout"
   },
+  "08b63cf265": {
+    "message": "The bot hasn't moved yet."
+  },
+  "1f682bf76b": {
+    "message": "Searching…"
+  },
+  "31fde7b05a": {
+    "message": "Preview"
+  },
   "3d728e1b6e": {
     "message": "we've logged this error and we'll fix it soon."
   },
   "44f00c21a1": {
     "message": "try going back to the <a>beginning</a>."
+  },
+  "4e902f18df": {
+    "message": "Make a move and I'll tell you what I think of it."
   },
   "5a2351b91b": {
     "message": "internal server error"
@@ -31,11 +43,26 @@
   "690d8ebdfb": {
     "message": "i'm sorry, dave. i'm afraid i can't do that."
   },
+  "6970f2dcec": {
+    "message": "No moves yet."
+  },
+  "6ffecfbf35": {
+    "message": "Loading Stockfish…"
+  },
   "794bd545aa": {
     "message": "React Scan"
   },
+  "7f493f9f66": {
+    "message": "You're playing 1,024 bytes of JavaScript. It explains itself; Stockfish keeps it honest."
+  },
+  "801517544f": {
+    "message": "Bot is thinking…"
+  },
   "835ca8f9cf": {
     "message": "it's not you, it's us. our server is monkeying around."
+  },
+  "88115b1879": {
+    "message": "What the bot was thinking"
   },
   "98088e4b13": {
     "message": "Something went wrong. 😦"
@@ -46,14 +73,35 @@
   "a4a78c3a33": {
     "message": "i18n: French"
   },
+  "a8cbabe59e": {
+    "message": "Coach"
+  },
+  "a964a3c6a5": {
+    "message": "Scores are in pawns: 0.0 is even, ± shows who's ahead, and a forced mate reads as M#. No fixed max — past roughly ±10 the game is decided."
+  },
+  "c7472d535a": {
+    "message": "Chess trainer"
+  },
   "c84d77792c": {
     "message": "i18n: Long"
+  },
+  "d11c7e9c40": {
+    "message": "Hint"
   },
   "d40cbcb573": {
     "message": "see no evil, hear no evil, speak no evil monkeys"
   },
+  "d7480e2b20": {
+    "message": "New game"
+  },
   "d8f4a19935": {
     "message": "not found"
+  },
+  "f14b5b2868": {
+    "message": "Checking that move…"
+  },
+  "fc695b2133": {
+    "message": "Moves"
   },
   "logo-id": {
     "message": "logo"

@@ -5,6 +5,24 @@
       "value": "Déconnexion"
     }
   ],
+  "08b63cf265": [
+    {
+      "type": 0,
+      "value": "The bot hasn't moved yet."
+    }
+  ],
+  "1f682bf76b": [
+    {
+      "type": 0,
+      "value": "Searching…"
+    }
+  ],
+  "31fde7b05a": [
+    {
+      "type": 0,
+      "value": "Preview"
+    }
+  ],
   "3d728e1b6e": [
     {
       "type": 0,
@@ -31,6 +49,12 @@
       "value": "."
     }
   ],
+  "4e902f18df": [
+    {
+      "type": 0,
+      "value": "Make a move and I'll tell you what I think of it."
+    }
+  ],
   "5a2351b91b": [
     {
       "type": 0,
@@ -55,16 +79,46 @@
       "value": "Je suis désolé, Dave. Je ne peux malheureusement pas faire ça."
     }
   ],
+  "6970f2dcec": [
+    {
+      "type": 0,
+      "value": "No moves yet."
+    }
+  ],
+  "6ffecfbf35": [
+    {
+      "type": 0,
+      "value": "Loading Stockfish…"
+    }
+  ],
   "794bd545aa": [
     {
       "type": 0,
       "value": "React Scan"
     }
   ],
+  "7f493f9f66": [
+    {
+      "type": 0,
+      "value": "You're playing 1,024 bytes of JavaScript. It explains itself; Stockfish keeps it honest."
+    }
+  ],
+  "801517544f": [
+    {
+      "type": 0,
+      "value": "Bot is thinking…"
+    }
+  ],
   "835ca8f9cf": [
     {
       "type": 0,
       "value": "Ce n'est pas vous, c'est nous. Notre serveur fait des bêtises."
+    }
+  ],
+  "88115b1879": [
+    {
+      "type": 0,
+      "value": "What the bot was thinking"
     }
   ],
   "98088e4b13": [
@@ -85,10 +139,34 @@
       "value": "i18n : français"
     }
   ],
+  "a8cbabe59e": [
+    {
+      "type": 0,
+      "value": "Coach"
+    }
+  ],
+  "a964a3c6a5": [
+    {
+      "type": 0,
+      "value": "Scores are in pawns: 0.0 is even, ± shows who's ahead, and a forced mate reads as M#. No fixed max — past roughly ±10 the game is decided."
+    }
+  ],
+  "c7472d535a": [
+    {
+      "type": 0,
+      "value": "Chess trainer"
+    }
+  ],
   "c84d77792c": [
     {
       "type": 0,
       "value": "i18n : long"
+    }
+  ],
+  "d11c7e9c40": [
+    {
+      "type": 0,
+      "value": "Hint"
     }
   ],
   "d40cbcb573": [
@@ -97,10 +175,28 @@
       "value": "Singes, ne voyez rien, n'entendez rien, ne dites rien, ne dites rien"
     }
   ],
+  "d7480e2b20": [
+    {
+      "type": 0,
+      "value": "New game"
+    }
+  ],
   "d8f4a19935": [
     {
       "type": 0,
       "value": "introuvable"
+    }
+  ],
+  "f14b5b2868": [
+    {
+      "type": 0,
+      "value": "Checking that move…"
+    }
+  ],
+  "fc695b2133": [
+    {
+      "type": 0,
+      "value": "Moves"
     }
   ],
   "logo-id": [

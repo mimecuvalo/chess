@@ -40,3 +40,5 @@ logs/*.log.gz
 generated/
 /dist
 /.output/
+# stockfish wasm, restored by scripts/copy-stockfish.mjs on install
+public/stockfish/

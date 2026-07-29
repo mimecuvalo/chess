@@ -43,6 +43,10 @@
 
   /* ---- Typography ---- */
   --font-oswald: 'Oswald Variable', sans-serif;
+  /* Pixel fonts for the chess trainer: Silkscreen for compact chrome/labels,
+     Press Start 2P for body copy (it's chunkier, so it wants more line-height). */
+  --font-pixel: 'Silkscreen', 'Courier New', monospace;
+  --font-pixel-body: 'Press Start 2P', 'Silkscreen', 'Courier New', monospace;
   --font-noto-color-emoji: 'Noto Color Emoji';
   --font-system:
     system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',

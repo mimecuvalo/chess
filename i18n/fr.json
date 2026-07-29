@@ -1,14 +1,14 @@
 {
   "smartling": {
-    "string_format": "icu",
     "translate_paths": [
       {
-        "instruction": "*/description",
+        "path": "*/message",
         "key": "{*}/message",
-        "path": "*/message"
+        "instruction": "*/description"
       }
     ],
-    "variants_enabled": true
+    "variants_enabled": true,
+    "string_format": "icu"
   },
   "0323de4f66": {
     "message": "Déconnexion"
@@ -57,5 +57,53 @@
   },
   "logo-id": {
     "message": "logo"
+  },
+  "08b63cf265": {
+    "message": "The bot hasn't moved yet."
+  },
+  "1f682bf76b": {
+    "message": "Searching…"
+  },
+  "31fde7b05a": {
+    "message": "Preview"
+  },
+  "4e902f18df": {
+    "message": "Make a move and I'll tell you what I think of it."
+  },
+  "6970f2dcec": {
+    "message": "No moves yet."
+  },
+  "6ffecfbf35": {
+    "message": "Loading Stockfish…"
+  },
+  "7f493f9f66": {
+    "message": "You're playing 1,024 bytes of JavaScript. It explains itself; Stockfish keeps it honest."
+  },
+  "801517544f": {
+    "message": "Bot is thinking…"
+  },
+  "88115b1879": {
+    "message": "What the bot was thinking"
+  },
+  "a8cbabe59e": {
+    "message": "Coach"
+  },
+  "a964a3c6a5": {
+    "message": "Scores are in pawns: 0.0 is even, ± shows who's ahead, and a forced mate reads as M#. No fixed max — past roughly ±10 the game is decided."
+  },
+  "c7472d535a": {
+    "message": "Chess trainer"
+  },
+  "d11c7e9c40": {
+    "message": "Hint"
+  },
+  "d7480e2b20": {
+    "message": "New game"
+  },
+  "f14b5b2868": {
+    "message": "Checking that move…"
+  },
+  "fc695b2133": {
+    "message": "Moves"
   }
 }
