@@ -3,6 +3,11 @@
  * powering VOLE.wtf's "The Kilobyte's Gambit". Original © 2010 Óscar Toledo G.,
  * https://nanochess.org/chess4.html#js1k
  *
+ * LICENSE: the original carries a copyright notice but no stated license or grant
+ * of permission, so this port — a derivative work of it — has no established
+ * redistribution terms. Included with attribution, pending confirmation from the
+ * author. See "Third-party components" in license.md before forking or shipping.
+ *
  * WHY THIS EXISTS
  * ---------------
  * We could have dropped the minified original in a <script> tag, but the whole

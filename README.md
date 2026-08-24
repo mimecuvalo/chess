@@ -115,17 +115,24 @@ about a second, which is plenty for coaching.
 
 ## Credits
 
-Chess engine © 2010 Óscar Toledo G., [nanochess.org](https://nanochess.org/).
-Inspired by [The Kilobyte's Gambit](https://vole.wtf/kilobytes-gambit/) by
-VOLE.wtf. Scaffolded from
-[all-the-things](https://github.com/mimecuvalo/all-the-things).
+Chess engine © 2010 Óscar Toledo G., [nanochess.org](https://nanochess.org/) —
+`lib/chess/nanochess.ts` is a derivative port, and the original states no license;
+see [license.md](license.md). Inspired by
+[The Kilobyte's Gambit](https://vole.wtf/kilobytes-gambit/) by VOLE.wtf.
+Scaffolded from [all-the-things](https://github.com/mimecuvalo/all-the-things).
+
+Coaching engine: [Stockfish](https://stockfishchess.org/), **GPL-3.0** — served
+to the browser from `public/stockfish/`, with its license text alongside it as
+`COPYING.txt`.
 
 Piece artwork: [Pixel Chess Pieces](https://opengameart.org/content/pixel-chess-pieces)
-by **Lucas312** (OpenGameArt), licensed CC-BY 3.0 / CC-BY-SA 3.0. The PNGs live in
+by **Lucas312** (OpenGameArt), used under CC-BY 3.0. The PNGs live in
 `public/pieces/`. Fonts: [Silkscreen](https://fonts.google.com/specimen/Silkscreen)
 and [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) (SIL Open
 Font License).
 
 ## 📜 License
 
-[MIT](license.md)
+[MIT](license.md) for this project's own source. Bundled third-party works keep
+their own terms — notably **Stockfish (GPL-3.0)** and the **unlicensed** upstream
+of the 1KB engine. See [Third-party components](license.md#third-party-components).
