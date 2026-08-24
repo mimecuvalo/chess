@@ -38,11 +38,4 @@ describe('migration regression coverage', () => {
     expect(response.status).toBe(204);
     expect(log).toHaveBeenCalledWith('Error:', { message: 'boom' });
   });
-
-  it('uses the request origin in the OpenSearch descriptor', async () => {
-    const response = await miscRoutes.request('http://localhost:3000/opensearch');
-    const xml = await response.text();
-
-    expect(xml).toContain('template="http://localhost:3000?q={searchTerms}"');
-  });
 });

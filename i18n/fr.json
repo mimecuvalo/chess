@@ -10,9 +10,6 @@
     "variants_enabled": true,
     "string_format": "icu"
   },
-  "0323de4f66": {
-    "message": "Déconnexion"
-  },
   "3d728e1b6e": {
     "message": "Nous avons enregistré cette erreur et nous la corrigerons bientôt."
   },
@@ -39,9 +36,6 @@
   },
   "98088e4b13": {
     "message": "Une erreur s'est produite. 😦"
-  },
-  "99dea78007": {
-    "message": "Connexion"
   },
   "a4a78c3a33": {
     "message": "i18n : français"

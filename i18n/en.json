@@ -10,9 +10,6 @@
     "variants_enabled": true,
     "string_format": "icu"
   },
-  "0323de4f66": {
-    "message": "Logout"
-  },
   "08b63cf265": {
     "message": "The bot hasn't moved yet."
   },
@@ -66,9 +63,6 @@
   },
   "98088e4b13": {
     "message": "Something went wrong. 😦"
-  },
-  "99dea78007": {
-    "message": "Login"
   },
   "a4a78c3a33": {
     "message": "i18n: French"

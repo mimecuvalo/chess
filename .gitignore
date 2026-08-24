@@ -36,8 +36,7 @@ sessions/
 logs/*.log
 logs/*.log.gz
 
-# tanstack start / vite / prisma
-generated/
+# tanstack start / vite
 /dist
 /.output/
 # stockfish wasm, restored by scripts/copy-stockfish.mjs on install

@@ -23,8 +23,6 @@ jobs:
           key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lock') }}
       - name: Install
         run: bun install --frozen-lockfile
-      - name: Generate Prisma client
-        run: bun run prisma:generate
       - name: Run oxlint
         run: bun run lint
       - name: Check formatting

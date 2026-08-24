@@ -42,38 +42,11 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 In dev or prod you'll want to setup your environment as well. Check out the `.env.example` file and `mv` it to `.env.development.local` (or `.env` for prod) and set the various variables:
 
-- `NEXT_PUBLIC_DB*` for your database
-- `NEXT_PUBLIC_SESSION_SECRET` for session management
-- `AUTH_*` variables if you would like to use Auth.js for logging in
-
 To run tests:
 
 ```sh
-yarn test
+bun test
 ```
-
-To setup your DB:
-
-```sh
-cp prisma/.env.example prisma/.env
-```
-
-and set DATABASE_URL=postgresql://postgres:password@databasedomain.com:PORT/postgres
-
-Then, to sync your DB:
-
-```sh
-npx prisma db push
-```
-
-To view your DB locally:
-
-```sh
-npx prisma studio
-```
-
-To learn more about Prisma, read the docs [here](https://www.prisma.io/).
-Supabase is pretty great to get a good Postgres DB: https://app.supabase.io/
 
 To add your name/email to relevant files:
 

@@ -1,10 +1,4 @@
 {
-  "0323de4f66": [
-    {
-      "type": 0,
-      "value": "Logout"
-    }
-  ],
   "08b63cf265": [
     {
       "type": 0,
@@ -125,12 +119,6 @@
     {
       "type": 0,
       "value": "Something went wrong. 😦"
-    }
-  ],
-  "99dea78007": [
-    {
-      "type": 0,
-      "value": "Login"
     }
   ],
   "a4a78c3a33": [

@@ -26,7 +26,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'minimum-scale=1, initial-scale=1, width=device-width' },
-      { title: 'all-the-things' },
+      { title: 'chess trainer' },
       { name: 'description', content: 'website created using all-the-things.' },
       { name: 'generator', content: 'all-the-things. https://github.com/mimecuvalo/all-the-things' },
     ],
@@ -35,12 +35,6 @@ export const Route = createRootRoute({
       { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
       { rel: 'apple-touch-icon', href: '/favicon.jpg' },
       { rel: 'manifest', href: '/manifest.json' },
-      {
-        rel: 'search',
-        href: '/api/opensearch',
-        type: 'application/opensearchdescription+xml',
-        title: 'all-the-things',
-      },
     ],
   }),
   component: RootComponent,

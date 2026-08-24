@@ -11,14 +11,11 @@ const abs = (p: string) => fileURLToPath(new URL(p, import.meta.url));
 
 loadEnv({ path: abs('./.env.local') });
 loadEnv({ path: abs('./.env') });
-loadEnv({ path: abs('./prisma/.env') });
 
 export default defineConfig({
   server: { port: 3000 },
   // Native tsconfig `paths` resolution (replaces the vite-tsconfig-paths plugin).
   resolve: { tsconfigPaths: true },
-  optimizeDeps: { exclude: ['pg', '@prisma/adapter-pg'] },
-  ssr: { external: ['pg', '@prisma/adapter-pg'] },
   plugins: [
     // srcDirectory is where Start looks for its entries: app/router.tsx (required),
     // app/start.ts, and app/routeTree.gen.ts. Everything else (components/, lib/,
