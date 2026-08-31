@@ -15,7 +15,19 @@ loadEnv({ path: abs('./.env') });
 export default defineConfig({
   server: { port: 3000 },
   // Native tsconfig `paths` resolution (replaces the vite-tsconfig-paths plugin).
-  resolve: { tsconfigPaths: true },
+  resolve: {
+    tsconfigPaths: true,
+    // react-intl without the ICU parser (~40% smaller):
+    // https://formatjs.io/docs/guides/advanced-usage#react-intl-without-parser-40-smaller
+    alias: isProd
+      ? [
+          {
+            find: /^@formatjs\/icu-messageformat-parser$/,
+            replacement: '@formatjs/icu-messageformat-parser/no-parser.js',
+          },
+        ]
+      : [],
+  },
   plugins: [
     // srcDirectory is where Start looks for its entries: app/router.tsx (required),
     // app/start.ts, and app/routeTree.gen.ts. Everything else (components/, lib/,
@@ -36,7 +48,6 @@ export default defineConfig({
       additionalComponentNames: ['F'],
       ast: true,
       flatten: true,
-      removeDefaultMessage: isProd,
     }),
     viteReact(),
   ],
