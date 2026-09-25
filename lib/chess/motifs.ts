@@ -267,7 +267,7 @@ export function hasBackRankWeakness(fen: string, color: Color): Motif | null {
   return {
     kind: 'back-rank',
     squares: [kingSquare, ...escapes],
-    phrase: `the king on ${kingSquare} has no luft — every escape square is blocked by its own pawns`,
+    phrase: `leaves the king on ${kingSquare} with no escape square, because its own pawns block all of them`,
   };
 }
 

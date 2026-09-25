@@ -135,9 +135,9 @@ export class RuleBasedExplainer implements CoachExplainer {
     const moveName = describeSanCapitalized(san);
     const headline =
       grade === 'best'
-        ? `${moveName} (${san}) — best move.`
+        ? `${moveName} (${san}) is the best move.`
         : grade === 'excellent' || grade === 'good'
-          ? `${moveName} (${san}) — ${GRADE_LABEL[grade].toLowerCase()}.`
+          ? `${moveName} (${san}) is ${GRADE_LABEL[grade].toLowerCase()}.`
           : `${moveName} (${san}) is ${grade === 'inaccuracy' ? 'an' : 'a'} ${GRADE_LABEL[grade].toLowerCase()}; it gives away ${describeCost(cpLost)}.`;
 
     // 2. The refutation: what the opponent gets to do about it.
@@ -155,7 +155,7 @@ export class RuleBasedExplainer implements CoachExplainer {
       const refSeg = moveSeg(fenAfter, refutation.san);
       detail.push({
         segments: grab
-          ? ['The problem is ', refSeg, ` — ${grab}.`]
+          ? ['The problem is ', refSeg, `, which ${grab}.`]
           : point
             ? ['The problem is ', refSeg, `, which ${point.phrase}.`]
             : ['The reply is ', refSeg, '.'],
@@ -195,7 +195,7 @@ export class RuleBasedExplainer implements CoachExplainer {
     // A parting warning about anything you left en prise.
     const loose = motifs.filter((m) => m.kind === 'hanging');
     if (loose.length && grade !== 'best') {
-      detail.push(`Careful — this ${loose[0].phrase}.`);
+      detail.push(`Careful, this move ${loose[0].phrase}.`);
     }
 
     return { headline, detail, highlight };
@@ -205,8 +205,8 @@ export class RuleBasedExplainer implements CoachExplainer {
     const { search } = ctx;
     const detail: DetailItem[] = [];
 
-    const chosenName = search.san ? describeSanCapitalized(search.san) : search.move;
-    const headline = `${chosenName} (${search.san || search.move}) — the bot scores this ${score(search.score / 100)}.`;
+    const chosen = search.san ? `${describeSan(search.san)} (${search.san})` : search.move;
+    const headline = `The bot played ${chosen} and scores it ${score(search.score / 100)}.`;
 
     // What it expects to happen next — spelled out as a list. (search.pv is SAN,
     // played from the position before the bot moved.)
@@ -230,7 +230,7 @@ export class RuleBasedExplainer implements CoachExplainer {
     // Honesty about the coin flip.
     if (search.tiedWithBest.length > 1) {
       detail.push(
-        `${search.tiedWithBest.length} moves tied for best, so it flipped a coin — it has no positional tiebreaker to appeal to.`
+        `${search.tiedWithBest.length} moves tied for best, so it picked one at random. It has no positional tiebreaker.`
       );
     }
 
@@ -263,8 +263,8 @@ export class RuleBasedExplainer implements CoachExplainer {
         headline: point
           ? `There's a move here that ${point.phrase}.`
           : loose.length
-            ? `Look for a loose piece — something of theirs isn't properly defended.`
-            : `Nothing tactical; look for the move that improves your worst-placed piece.`,
+            ? `Look for a loose piece. One of theirs is undefended or attacked by something cheaper.`
+            : `There's no tactic here. Look for a move that improves your worst-placed piece.`,
         detail: [],
         highlight: [],
       };
@@ -311,12 +311,12 @@ function describeFreeCapture(fen: string, uci: UciMove): string | null {
   const target = pieceName(move.captured);
   const recapturers = chess.attackers(move.to as never, chess.turn());
 
-  if (!recapturers.length) return `it just takes the ${target}`;
+  if (!recapturers.length) return `takes the ${target} for free`;
 
   const capturedValue = PIECE_VALUE[move.captured] ?? 0;
   const attackerValue = PIECE_VALUE[move.piece] ?? 0;
   if (capturedValue - attackerValue >= 2) {
-    return `it wins the ${target} for a ${pieceName(move.piece)}`;
+    return `wins the ${target} for a ${pieceName(move.piece)}`;
   }
   return null;
 }
@@ -351,12 +351,12 @@ function describeBlindSpot(ctx: BotMoveContext): string | null {
   if (gap > 0) {
     // The bot is more optimistic than reality.
     if (loose.length) {
-      return `Stockfish rates this ${score(botViewCp / 100)} — the bot missed that its ${pieceName(loose[0].piece)} on ${loose[0].square} is loose. Its evaluation is material only, so an attacked piece looks the same as a safe one until it's actually captured.`;
+      return `Stockfish rates this ${score(botViewCp / 100)}. The bot missed that its ${pieceName(loose[0].piece)} on ${loose[0].square} is loose. It only counts material, so it treats an attacked piece the same as a safe one until the piece is captured.`;
     }
-    return `Stockfish rates this ${score(botViewCp / 100)}, well below the bot's own ${score(botOwnScore / 100)}. With no king safety or mobility terms, it can't see positional trouble coming — only material it has already counted.`;
+    return `Stockfish rates this ${score(botViewCp / 100)}, well below the bot's own ${score(botOwnScore / 100)}. The bot's evaluation has no terms for king safety or mobility, so it only notices trouble once material changes hands.`;
   }
 
-  return `Stockfish actually likes this more than the bot does (${score(botViewCp / 100)} vs ${score(botOwnScore / 100)}). It stumbled into a good move it can't explain — at four plies it saw the material, not the reason.`;
+  return `Stockfish rates this higher than the bot does (${score(botViewCp / 100)} vs ${score(botOwnScore / 100)}). The bot found a good move without knowing why it's good. Its ${ctx.search.depth}-ply search saw the material, not the reason.`;
 }
 
 /** The colour the bot is playing, derived from whose turn it is after its move. */

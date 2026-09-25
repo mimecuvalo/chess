@@ -204,7 +204,7 @@ export default function Trainer() {
           <F defaultMessage="Chess trainer" />
         </h1>
         <p className={styles.subtitle}>
-          <F defaultMessage="You're playing 1,024 bytes of JavaScript. It explains itself; Stockfish keeps it honest." />
+          <F defaultMessage="You're playing a chess engine written in 1,024 bytes of JavaScript. It explains each of its moves, and Stockfish grades both sides." />
         </p>
       </header>
 

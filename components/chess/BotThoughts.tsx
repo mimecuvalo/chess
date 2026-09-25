@@ -44,7 +44,7 @@ export default function BotThoughts({
             <span>{thoughts.search.timeMs} ms</span>
           </div>
           <p className={styles.scale}>
-            <F defaultMessage="Scores are in pawns: 0.0 is even, ± shows who's ahead, and a forced mate reads as M#. No fixed max — past roughly ±10 the game is decided." />
+            <F defaultMessage="Scores are in pawns: 0.0 is even, ± shows who's ahead, and a forced mate reads as M#. There's no maximum, but past about ±10 the game is decided." />
           </p>
         </>
       ) : (

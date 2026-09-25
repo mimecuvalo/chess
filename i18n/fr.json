@@ -70,9 +70,6 @@
   "6ffecfbf35": {
     "message": "Loading Stockfish…"
   },
-  "7f493f9f66": {
-    "message": "You're playing 1,024 bytes of JavaScript. It explains itself; Stockfish keeps it honest."
-  },
   "801517544f": {
     "message": "Bot is thinking…"
   },
@@ -81,9 +78,6 @@
   },
   "a8cbabe59e": {
     "message": "Coach"
-  },
-  "a964a3c6a5": {
-    "message": "Scores are in pawns: 0.0 is even, ± shows who's ahead, and a forced mate reads as M#. No fixed max — past roughly ±10 the game is decided."
   },
   "c7472d535a": {
     "message": "Chess trainer"
@@ -99,5 +93,11 @@
   },
   "fc695b2133": {
     "message": "Moves"
+  },
+  "7e20c540a8": {
+    "message": "You're playing a chess engine written in 1,024 bytes of JavaScript. It explains each of its moves, and Stockfish grades both sides."
+  },
+  "b49564bd94": {
+    "message": "Scores are in pawns: 0.0 is even, ± shows who's ahead, and a forced mate reads as M#. There's no maximum, but past about ±10 the game is decided."
   }
 }
